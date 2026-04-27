@@ -3,263 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shivam Kumar Bharti | Portfolio</title>
+<title>Shivam Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
 <style>
-
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background: #f4f6f9;
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: white;
 }
 
-/* NAVBAR */
+/* Navbar */
 nav {
-    background: #0a66c2;
-    padding: 12px;
-    text-align: center;
-}
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* HEADER */
-header {
-    background: #0a66c2;
-    color: white;
-    padding: 40px 20px;
-}
-
-.header-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: 20px;
+    background: #020617;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Hero */
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero p {
+    color: #94a3b8;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    background: #38bdf8;
+    color: black;
+    cursor: pointer;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
-.header-text {
-    max-width: 60%;
-}
-
-.profile-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 4px solid white;
-    object-fit: cover;
-}
-
-/* SECTION */
-section {
-    padding: 30px;
-    margin: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
-}
-
-h2 {
-    color: #0a66c2;
-}
-
-/* COMPANY */
-.company {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.company img {
-    width: 120px;
-    margin-top: 10px;
-    border-radius: 6px;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
+.card {
+    background: #1e293b;
     padding: 20px;
-    background: #0a66c2;
-    color: white;
+    border-radius: 10px;
+    width: 280px;
 }
 
+/* Footer */
+footer {
+    background: #020617;
+    padding: 20px;
+    text-align: center;
+}
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- Navbar -->
 <nav>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
+    <h2>Shivam</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
 
-<!-- HEADER -->
-<header>
-<div class="header-container">
+<!-- Hero -->
+<section class="hero">
+    <h1>Hi, I'm Shivam 👋</h1>
+    <p>Aspiring Data Analyst skilled in Power BI, SQL & Python</p>
+    
+    <button onclick="window.open('https://github.com/0707kumarshivam-debug')">GitHub</button>
+    <button onclick="window.open('https://www.linkedin.com')">LinkedIn</button>
+</section>
 
-<div class="header-text">
-<h1>Shivam Kumar Bharti</h1>
-<p>Data Analyst | MBA (Data Science)</p>
-<p>📞 7827833259 | 📧 0707kumar.shivam@gmail.com</p>
-
-<p>
-🔗 <a href="https://www.linkedin.com/in/shivam-kumar-7a7244297/" target="_blank" style="color:white;">
-View My LinkedIn Profile
-</a>
-</p>
-</div>
-
-<!-- ✅ YOUR PHOTO -->
-<img src="profile.jpg" class="profile-img" alt="Shivam Photo">
-
-
-</div>
-</header>
-
-<!-- ABOUT -->
+<!-- About -->
 <section id="about">
-<h2>About Me</h2>
-<p>
-Results-driven professional with 4+ years of experience in sales and customer engagement.
-Currently pursuing MBA in Data Science and transitioning into Data Analytics and Business Analysis.
-Skilled in Excel, SQL, Power BI, and generating actionable business insights.
-</p>
+    <h2>About Me</h2>
+    <p>
+        I am a Data Analyst with a background in sales, skilled in turning raw data into actionable insights using Power BI, SQL, and Excel.
+    </p>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-<h2>Work Experience</h2>
-
-<div class="company">
-<h3>Antara Assisted Care Limited</h3>
-<p><b>Role:</b> Customer & Sales Executive</p>
-<p><b>Duration:</b> Dec 2023 – May 2025</p>
-
-<p>
-Antara is a leading senior care company providing healthcare, assisted living,
-and wellness services for elderly individuals.
-</p>
-
-<ul>
-<li>Improved productivity by 15%</li>
-<li>Reduced delays by 30%</li>
-<li>Trained team members</li>
-</ul>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Antara_Senior_Care_logo.png">
-<br>
-<a href="https://www.antaraseniorcare.com/" target="_blank">Visit Company</a>
-</div>
-
-<div class="company">
-<h3>Hexa Health</h3>
-<p><b>Role:</b> Sales Executive</p>
-<p><b>Duration:</b> Jun 2025 – Nov 2025</p>
-
-<p>
-Hexa Health is a healthcare platform helping patients find hospitals and treatments
-using data-driven insights.
-</p>
-
-<ul>
-<li>Analyzed customer data</li>
-<li>Improved conversion funnel</li>
-<li>Managed CRM insights</li>
-</ul>
-
-<img src="https://www.hexahealth.com/images/logo.svg">
-<br>
-<a href="https://www.hexahealth.com/" target="_blank">Visit Company</a>
-</div>
-
-<div class="company">
-<h3>Expedient Healthcare Marketing Pvt. Ltd.</h3>
-<p><b>Role:</b> Telesales Executive</p>
-<p><b>Duration:</b> Aug 2022 – Nov 2023</p>
-
-<p>
-Healthcare marketing company connecting patients with diagnostic services.
-</p>
-
-<ul>
-<li>Top performer</li>
-<li>Handled leadership responsibilities</li>
-</ul>
-</div>
-
-<div class="company">
-<h3>Housing.com</h3>
-<p><b>Role:</b> Telesales Executive</p>
-<p><b>Duration:</b> Feb 2021 – Aug 2022</p>
-
-<p>
-Housing.com is a real estate platform for buying, selling, and renting properties.
-</p>
-
-<ul>
-<li>Client management</li>
-<li>Closed high-value deals</li>
-</ul>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Housing.com_logo.png">
-<br>
-<a href="https://housing.com/" target="_blank">Visit Company</a>
-</div>
-
-</section>
-
-<!-- SKILLS -->
+<!-- Skills -->
 <section id="skills">
-<h2>Skills</h2>
-<ul>
-<li>Excel (Advanced)</li>
-<li>SQL</li>
-<li>Power BI</li>
-<li>Python</li>
-<li>HTML & CSS</li>
-</ul>
+    <h2>Skills</h2>
+    <div class="cards">
+        <div class="card">Power BI</div>
+        <div class="card">SQL</div>
+        <div class="card">Excel</div>
+        <div class="card">Python</div>
+    </div>
 </section>
 
-<!-- EDUCATION -->
-<section id="education">
-<h2>Education</h2>
+<!-- Projects -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
 
-<div class="company">
-<p><b>MBA (Data Science)</b> – Amity University</p>
-<p>Leading private university focused on innovation and research.</p>
+        <div class="card">
+            <h3>Sales Dashboard</h3>
+            <p>Built Power BI dashboard analyzing $9.6M sales & profit.</p>
+            <button>View Project</button>
+        </div>
 
-<img src="https://upload.wikimedia.org/wikipedia/en/9/90/Amity_University_logo.png">
-<br>
-<a href="https://www.amity.edu/" target="_blank">Visit University</a>
-</div>
+        <div class="card">
+            <h3>SQL Analysis</h3>
+            <p>Analyzed sales data using SQL to find trends & top products.</p>
+            <button>View Project</button>
+        </div>
 
-<div class="company">
-<p><b>B.Sc Mathematics</b> – Kumaun University</p>
-<p>Public university offering diverse academic programs.</p>
-
-<img src="https://upload.wikimedia.org/wikipedia/en/4/4e/Kumaun_University_logo.png">
-<br>
-<a href="https://www.kunainital.ac.in/" target="_blank">Visit University</a>
-</div>
-
+    </div>
 </section>
 
-<!-- CONTACT -->
+<!-- Contact -->
 <section id="contact">
-<h2>Contact</h2>
-<p>Email: 0707kumar.shivam@gmail.com</p>
-<p>Phone: 7827833259</p>
+    <h2>Contact</h2>
+    <p>Email: 0707kumar.shivam@gmail.com</p>
+    <p>Phone: 9761315014</p>
 </section>
 
+<!-- Footer -->
 <footer>
-<p>© 2026 Shivam Kumar Bharti</p>
+    <p>© 2026 Shivam | Data Analyst Portfolio</p>
 </footer>
 
 </body>
