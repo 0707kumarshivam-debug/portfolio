@@ -1,71 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Shivam Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap)" rel="stylesheet" />
 
 <style>
+:root {
+    --bg-dark: #0f172a;
+    --bg-light: #1e293b;
+    --accent: #38bdf8;
+    --text-light: #ffffff;
+    --text-muted: #94a3b8;
+}
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #0f172a;
-    color: white;
+    background: var(--bg-dark);
+    color: var(--text-light);
 }
 
 /* Navbar */
+header {
+    background: #020617;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background: #020617;
+    align-items: center;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+}
+
+nav h2 {
+    margin: 0;
+    font-weight: 600;
 }
 
 nav a {
-    color: white;
+    color: var(--text-light);
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 12px;
+    font-weight: 300;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
 }
 
 /* Sections */
 section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
+    max-width: 1000px;
+    margin: auto;
 }
 
-/* Hero */
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Hero Section */
 .hero h1 {
-    font-size: 40px;
+    font-size: 48px;
+    margin: 10px 0;
 }
 
 .hero p {
-    color: #94a3b8;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
 }
 
 button {
     padding: 10px 20px;
-    margin-top: 10px;
     border: none;
-    background: #38bdf8;
-    color: black;
+    background: var(--accent);
+    color: #000;
+    font-weight: 600;
+    border-radius: 6px;
+    margin: 8px;
     cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
 }
 
-/* Cards */
+button:hover {
+    transform: translateY(-2px);
+    background: #67e8f9;
+}
+
+/* Card Layout */
 .cards {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 .card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: 12px;
     width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+}
+
+/* Contact Section */
+#contact p {
+    margin: 5px 0;
+    color: var(--text-muted);
 }
 
 /* Footer */
@@ -73,13 +139,26 @@ footer {
     background: #020617;
     padding: 20px;
     text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
+<header>
 <nav>
     <h2>Shivam</h2>
     <div>
@@ -89,21 +168,22 @@ footer {
         <a href="#contact">Contact</a>
     </div>
 </nav>
+</header>
 
+<main>
 <!-- Hero -->
 <section class="hero">
     <h1>Hi, I'm Shivam 👋</h1>
     <p>Aspiring Data Analyst skilled in Power BI, SQL & Python</p>
-    
-    <button onclick="window.open('https://github.com/0707kumarshivam-debug')">GitHub</button>
-    <button onclick="window.open('https://www.linkedin.com')">LinkedIn</button>
+    <button onclick="window.open('[github.com](https://github.com/0707kumarshivam-debug)')">GitHub</button>
+    <button onclick="window.open('[linkedin.com](https://www.linkedin.com)')">LinkedIn</button>
 </section>
 
 <!-- About -->
 <section id="about">
     <h2>About Me</h2>
     <p>
-        I am a Data Analyst with a background in sales, skilled in turning raw data into actionable insights using Power BI, SQL, and Excel.
+        I am a Data Analyst with a background in sales, passionate about transforming raw data into actionable insights using Power BI, SQL, Excel, and Python.
     </p>
 </section>
 
@@ -122,30 +202,27 @@ footer {
 <section id="projects">
     <h2>Projects</h2>
     <div class="cards">
-
         <div class="card">
             <h3>Sales Dashboard</h3>
-            <p>Built Power BI dashboard analyzing $9.6M sales & profit.</p>
-            <button>View Project</button>
+            <p>Created a Power BI dashboard analyzing $9.6M in sales and profit trends to uncover key performance drivers.</p>
+            <button onclick="window.open('#')">View Project</button>
         </div>
-
         <div class="card">
             <h3>SQL Analysis</h3>
-            <p>Analyzed sales data using SQL to find trends & top products.</p>
-            <button>View Project</button>
+            <p>Performed detailed SQL analysis to identify revenue patterns and top-performing products across categories.</p>
+            <button onclick="window.open('#')">View Project</button>
         </div>
-
     </div>
 </section>
 
 <!-- Contact -->
 <section id="contact">
     <h2>Contact</h2>
-    <p>Email: 0707kumar.shivam@gmail.com</p>
-    <p>Phone: 9761315014</p>
+    <p>Email: <strong>0707kumar.shivam@gmail.com</strong></p>
+    <p>Phone: <strong>+91 97613 15014</strong></p>
 </section>
+</main>
 
-<!-- Footer -->
 <footer>
     <p>© 2026 Shivam | Data Analyst Portfolio</p>
 </footer>
